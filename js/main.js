@@ -52,10 +52,10 @@ $(document).ready(() => {
 
   //Form submit validation
   $(".page-form-submit").click(() => {
-    let name = $(".form form input:nth-child(1)");
-    let phone = $(".form form input:nth-child(2)");
-    let last_name = $(".form form input:nth-child(3)");
-    let email = $(".form form input:nth-child(4)");
+    let name = $(".oder-form-container .form form input:nth-child(1)");
+    let phone = $(".oder-form-container .form form input:nth-child(2)");
+    let last_name = $(".oder-form-container .form form input:nth-child(3)");
+    let email = $(".oder-form-container .form form input:nth-child(4)");
     let middle_name = $(".form form input:nth-child(5)");
     let date = $(".form form input:nth-child(6)");
     if (name.val() && phone.val() && last_name.val() && email.val()) {
@@ -233,17 +233,17 @@ $(document).ready(() => {
     } else {
       if (!name.val()) {
         name.addClass("required");
-        $("#order-call > div.form > .error-message").show();
+        $("#order-call > div > div > div.form > div.error-message").show();
       } else {
         name.removeClass("required");
-        $("#order-call > div.form > .error-message").hide();
+        $("#order-call > div > div > div.form > div.error-message").hide();
       }
       if (!phone.val()) {
         phone.addClass("required");
-        $("#order-call > div.form > .error-message").show();
+        $("#order-call > div > div > div.form > div.error-message").show();
       } else {
         phone.removeClass("required");
-        $("#order-call > div.form > .error-message").hide();
+        $("#order-call > div > div > div.form > div.error-message").hide();
       }
     }
   });

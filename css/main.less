@@ -559,8 +559,14 @@ body {
     .portfolio-card-text-container {
       position: unset;
       max-width: 370px;
-      margin-left: 140px;
+      margin-left: 110px;
       border-radius: 5px;
+    }
+    .general-button.return {
+      &::before {
+        content: url("../images/arrow-btt.png");
+        margin-right: 10px;
+      }
     }
   }
 }
@@ -967,6 +973,7 @@ form {
   bottom: 35px;
   right: 15px;
   border-radius: 50%;
+  transform: rotate(90deg);
   cursor: pointer;
   &:hover {
     opacity: 0.8;
