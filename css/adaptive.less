@@ -8,6 +8,18 @@
 }
 
 @media screen and (max-width: 1200px) {
+  .about-me .about-me-container .about-me-content {
+    margin-bottom: 290px;
+  }
+
+  .main .main-container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  #features-title {
+    display: block;
+    margin-bottom: 0;
+  }
   .paragraph-text {
     font-size: 14px;
     line-height: 19px;
@@ -37,7 +49,7 @@
   }
   .about-me .about-me-container .features-container {
     border: none;
-    width: 644px;
+    max-width: 644px;
     margin: 0 auto;
   }
   .about-me .about-me-container .features-container .feature-item {
@@ -67,8 +79,27 @@
     margin: 0 15px;
   }
 }
+
+@media screen and (max-width: 1170px) {
+  .expanded-portfolio-card {
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .expanded-portfolio-card .images-container img {
+    width: 330px;
+  }
+  .expanded-portfolio-card
+    .expanded-portfolio-navigation
+    .portfolio-card-text-container {
+    max-width: 330px;
+    margin-left: 70px;
+  }
+}
+
 @media screen and (max-width: 1100px) {
-  .header-container .menu-container .phone-number {
+  .header-container .menu-container .phone-number,
+  .header-container .phone-number {
     margin-left: 57px;
   }
   .about-me .about-me-container .about-me-content-img img:last-child {
@@ -84,24 +115,46 @@
       z-index: -1;
     }
   }
+  section {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
 }
 
 @media screen and (max-width: 1024px) {
+  .footer .header-container .logo {
+    margin-right: 0;
+    margin-bottom: 17px;
+  }
+  .main .main-container {
+    padding-left: 0;
+    padding-right: 0;
+  }
   .question-answers {
     overflow: hidden;
   }
   .question-answers::after {
     right: -100px;
   }
-
+  .header .header-container .order-call-button {
+    margin-right: 20px;
+  }
+  .footer .header .header-container .logo {
+    margin-left: 20px;
+  }
   header .header-container .menu-container {
     order: 3;
     width: 100%;
     justify-content: space-between;
-    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 3px solid white;
+    padding-left: 20px;
+    padding-right: 20px;
   }
   header .header-container {
     justify-content: space-between;
+    padding-left: 0;
+    padding-right: 0;
   }
   header .header-container .menu-container .phone-number {
     margin-right: 0;
@@ -119,6 +172,9 @@
   }
   .main .main-container .main-description::after {
     left: 470px;
+  }
+  .header-container .menu-container .menu .menu-item {
+    margin: 0 20px;
   }
   .oder-form-container {
     overflow: hidden;
@@ -172,15 +228,65 @@
   .portfolio .portfolio-container .portfolio-cards #bow {
     right: -20px;
   }
-  #features-title {
-    display: block;
-    margin-bottom: 0;
-  }
+
   .about-me .about-me-container .features-container {
     padding-top: 40px;
   }
+  .footer .header-container .menu-container .menu .menu-item {
+    margin: 0 25px;
+  }
+
+  .footer .header-container .menu-container {
+    width: 100%;
+    .menu {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      padding-top: 40px;
+      border-top: 3px solid white;
+      margin-bottom: 60px;
+    }
+  }
+  .footer .header-container {
+    justify-content: center;
+  }
+  .footer .header-container .phone-number {
+    margin-left: 0;
+  }
+  .header .header-container .logo {
+    margin-right: 0;
+    margin-bottom: 17px;
+    margin-left: 20px;
+  }
+  .footer .header-container {
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: 40px;
+  }
+  #order-popup > div > div > div.form.popup > form {
+    width: 550px;
+  }
+  #order-popup .oder-form-container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .tablet-scroll {
+    padding-top: 140px !important;
+    padding-bottom: 0 !important;
+  }
 }
 @media screen and (max-width: 920px) {
+  #order-popup .form-img > img {
+    position: absolute;
+    bottom: -90px;
+    left: 0px;
+    width: 250px;
+  }
+  #order-popup .oder-form-container {
+    padding-left: 100px;
+    padding-right: 100px;
+  }
   .main .main-container .main-description {
     max-width: 400px;
     padding-right: 30px;
@@ -193,7 +299,7 @@
     .about-me-container
     .about-me-content-text
     .paragraph-text:first-child {
-    width: 346px;
+    max-width: 346px;
   }
   div.about-me-content > div.about-me-content-img > img:nth-child(1) {
     width: 348px;
@@ -215,11 +321,259 @@
     left: 10px;
   }
 }
-@media screen and (max-width: 768px) {
-}
 
 @media screen and (max-width: 768px) {
+  // .main .main-container .main-description::after {
+  //   content: url("../images/main-image-smaller.png");
+  // }
+  .main-img,
+  .main .main-container .main-img img {
+    display: block;
+    position: static;
+    width: 450px;
+    margin-bottom: 30px;
+  }
+  .main .main-container .main-description {
+    background: transparent;
+    padding: 0;
+    text-align: center;
+    margin: 0 auto;
+    position: static;
+    max-width: 450px;
+    &::before {
+      display: none;
+    }
+    &::after {
+      content: "";
+    }
+  }
+  .main .main-container .main-description .main-description-title {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .about-me
+    .about-me-container
+    .about-me-content-text
+    .paragraph-text:not(:first-child) {
+    margin-left: 0;
+  }
+  .about-me
+    .about-me-container
+    .about-me-content-text
+    .paragraph-text:not(:first-child) {
+    margin-left: 0;
+  }
+  .about-me .about-me-container .about-me-content {
+    flex-direction: column;
+    align-items: center;
+  }
+  .about-me .about-me-container .about-me-content-text {
+    margin-right: 0;
+  }
+  .expanded-portfolio-card .images-container {
+    flex-wrap: nowrap;
+    overflow-x: scroll;
+  }
+  .portfolio .portfolio-container .portfolio-cards {
+    flex-wrap: nowrap;
+    max-width: 370px;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: flex-start;
+    overflow-x: scroll;
+  }
+  .portfolio .portfolio-container .portfolio-cards #bow {
+    display: none;
+  }
+  .portfolio .portfolio-container .portfolio-cards .portfolio-card img {
+    width: unset;
+    height: unset;
+  }
+  .about-me .about-me-container .about-me-content {
+    margin-bottom: 140px;
+  }
+  #order-call > div > div > img,
+  #order-popup .form-img > img {
+    position: absolute;
+    bottom: -51px;
+    left: 0;
+    width: 140px;
+  }
+  #order-call .order-call-popup .form-container .form form {
+    margin-right: 0;
+  }
+  #order-call .order-call-popup {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  #order-call .order-call-popup .section-title {
+    text-align: center;
+    font-size: 34px;
+  }
+  #order-popup .oder-form-container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 700px) {
+  #services-flowers {
+    display: none;
+  }
+
+  #services-flowers-smaller {
+    display: inline;
+  }
+}
+@media screen and (max-width: 683px) {
+  .about-me .about-me-container .features-container #feature-flower {
+    display: none;
+  }
+  .about-me .about-me-container .features-container {
+    justify-content: center;
+  }
+  .services-cards-container {
+    flex-wrap: wrap;
+  }
+  .services .services-cotainer .services-cards-container .card {
+    margin-bottom: 20px;
+  }
+}
+
+@media screen and (max-width: 660px) {
+  #order-popup > div > div > div.form.popup > form {
+    width: 300px;
+  }
+  .section-title {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  header .header-container .menu-container {
+    display: none;
+  }
+  .header .header-container .order-call-button {
+    display: none;
+  }
+  .header .header-container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  section.order > div > div > div > div.form-img > img {
+    bottom: -58px;
+    width: 200px;
+  }
+  .about-me .about-me-container .features-container {
+    justify-content: center;
+  }
+  .portfolio .portfolio-container .stock {
+    flex-direction: column;
+  }
+  .form form {
+    justify-content: center;
+    width: 300px;
+  }
+  .oder-form-container .section-title {
+    text-align: center;
+  }
+  .reviews .reviews-container .reviews-stock {
+    background: url("../images/reviews-stock-bg-smaller.png");
+    background-repeat: no-repeat;
+    background-position: right top;
+  }
+  .header .header-container .logo {
+    margin-left: 0;
+    margin-bottom: 0;
+  }
+  .reviews .reviews-container .reviews-carousel .carousel-item::before {
+    content: "";
+  }
+
+  .main {
+    padding-top: 130px;
+    padding-bottom: 140px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .footer .header-container .menu-container .menu {
+    flex-direction: column;
+    align-items: center;
+    border-top: none;
+  }
+  .footer .header-container .logo {
+    margin-bottom: 0;
+  }
+  .footer .header-container {
+    flex-direction: column;
+  }
+  .footer .header-container .phone-number {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+  .footer .header-container .menu-container .menu {
+    margin-bottom: 45px;
+  }
+  .footer .header-container .menu-container .menu .menu-item {
+    margin-top: 10px;
+    margin-right: 10px;
+    margin-left: 10px;
+  }
+}
+
+@media screen and (max-width: 475px) {
+  .main-img,
+  .main .main-container .main-img img {
+    margin-left: auto;
+    margin-right: auto;
+    width: 300px;
+  }
+  .reviews .reviews-container .reviews-carousel .carousel-item {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .footer .header-container .menu-container .menu .menu-item {
+    margin-top: 10px;
+    margin-right: 10px;
+  }
+  .ui-accordion .ui-accordion-header {
+    font-size: 14px;
+    line-height: 18px;
+  }
+  section.order > div > div > div > div.form-img > img {
+    bottom: -40px;
+    width: 120px;
+  }
+  .question-answers::after {
+    display: none;
+  }
+  #portfolio > div > div.stock > div.stock-images > img:nth-child(1) {
+    display: none;
+  }
+  .reviews .reviews-container .reviews-carousel .carousel-item .review-text {
+    padding: 20px 20px 40px 20px;
+  }
+}
+@media screen and (max-width: 375px) {
+  .about-me
+    .about-me-container
+    .about-me-content-text
+    .paragraph-text:first-child,
+  .about-me
+    .about-me-container
+    .about-me-content-text
+    .paragraph-text:not(:first-child) {
+    width: 300px;
+  }
+  div.about-me-content > div.about-me-content-img > img:nth-child(1) {
+    width: 300px;
+  }
+  .services .services-cotainer .quote {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .portfolio .portfolio-container .portfolio-cards .portfolio-card img {
+    width: 300px;
+  }
 }

@@ -121,6 +121,17 @@ body {
       }
     }
   }
+  .phone-number {
+    font-family: "Nunito Bold", sans-serif;
+    font-size: 14px;
+    line-height: 19px;
+    color: @text-color;
+    margin-left: 127px;
+    margin-right: 50px;
+    &:hover {
+      color: #b78781;
+    }
+  }
   .menu-container {
     display: flex;
     display: flex;
@@ -135,17 +146,6 @@ body {
         &:hover {
           color: #b78781;
         }
-      }
-    }
-    .phone-number {
-      font-family: "Nunito Bold", sans-serif;
-      font-size: 14px;
-      line-height: 19px;
-      color: @text-color;
-      margin-left: 127px;
-      margin-right: 50px;
-      &:hover {
-        color: #b78781;
       }
     }
   }
@@ -913,7 +913,7 @@ form {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  width: 620px;
+  max-width: 620px;
   .form-input {
     font-family: "Nunito Regular", sans-serif;
     width: 260px;
@@ -999,6 +999,7 @@ form {
   display: none;
   align-items: center;
   justify-content: center;
+  padding: 0 15px;
 }
 
 body.modal-open {
@@ -1042,15 +1043,18 @@ body.modal-open {
   }
 }
 
-section {
-  padding-left: 20px;
-  padding-right: 20px;
-}
-
 .ui-accordion .ui-accordion-content {
   background: transparent;
 }
 
 #features-title {
+  display: none;
+}
+
+#burger {
+  display: none;
+}
+
+#services-flowers-smaller {
   display: none;
 }
