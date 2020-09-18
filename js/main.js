@@ -303,4 +303,17 @@ $(document).ready(() => {
     $("#order-call").css("display", "none");
     $("body").removeClass("modal-open");
   });
+  //Burger Menu
+  $("#burger").click(() => {
+    $("#burger-popup").css("display", "flex");
+    $("body").addClass("modal-open");
+    console.log(1);
+  });
+  $("#burger-popup .close-popup").click(() => {
+    $("#burger-popup").css("display", "none");
+    $("body").removeClass("modal-open");
+  });
+  $("#burger-popup .burger-menu .order-call-button").click(() => {
+    $("#burger-popup").css("display", "none");
+  });
 });

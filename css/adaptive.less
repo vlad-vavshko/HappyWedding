@@ -122,6 +122,19 @@
 }
 
 @media screen and (max-width: 1024px) {
+  #order-call > div > div > img,
+  #order-popup .form-img > img {
+    position: absolute;
+    bottom: -51px;
+    left: 0;
+    width: 140px;
+  }
+  .form-submit-success span {
+    margin-bottom: 40px !important;
+  }
+  #order-popup > div > div > div.form-submit-success {
+    position: static;
+  }
   .footer .header-container .logo {
     margin-right: 0;
     margin-bottom: 17px;
@@ -277,12 +290,6 @@
   }
 }
 @media screen and (max-width: 920px) {
-  #order-popup .form-img > img {
-    position: absolute;
-    bottom: -90px;
-    left: 0px;
-    width: 250px;
-  }
   #order-popup .oder-form-container {
     padding-left: 100px;
     padding-right: 100px;
@@ -320,9 +327,35 @@
   .reviews .reviews-container .reviews-stock::after {
     left: 10px;
   }
+  .portfolio .portfolio-container .portfolio-cards {
+    flex-wrap: nowrap;
+    max-width: 370px;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: flex-start;
+    overflow-x: scroll;
+  }
+  .portfolio .portfolio-container .portfolio-cards #bow {
+    display: none;
+  }
+  .portfolio .portfolio-container .portfolio-cards .portfolio-card img {
+    width: unset;
+    height: unset;
+  }
+
+  .about-me .about-me-container .about-me-content {
+    margin-bottom: 280px;
+  }
+  .portfolio .portfolio-container .portfolio-cards #hearts-portfolio {
+    display: none;
+  }
+  .expanded-portfolio-card .images-container {
+    flex-wrap: nowrap;
+    overflow-x: scroll;
+  }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   // .main .main-container .main-description::after {
   //   content: url("../images/main-image-smaller.png");
   // }
@@ -370,28 +403,7 @@
   .about-me .about-me-container .about-me-content-text {
     margin-right: 0;
   }
-  .expanded-portfolio-card .images-container {
-    flex-wrap: nowrap;
-    overflow-x: scroll;
-  }
-  .portfolio .portfolio-container .portfolio-cards {
-    flex-wrap: nowrap;
-    max-width: 370px;
-    margin-left: auto;
-    margin-right: auto;
-    justify-content: flex-start;
-    overflow-x: scroll;
-  }
-  .portfolio .portfolio-container .portfolio-cards #bow {
-    display: none;
-  }
-  .portfolio .portfolio-container .portfolio-cards .portfolio-card img {
-    width: unset;
-    height: unset;
-  }
-  .about-me .about-me-container .about-me-content {
-    margin-bottom: 140px;
-  }
+
   #order-call > div > div > img,
   #order-popup .form-img > img {
     position: absolute;
@@ -407,6 +419,7 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
+    overflow: hidden;
   }
   #order-call .order-call-popup .section-title {
     text-align: center;
@@ -415,6 +428,25 @@
   #order-popup .oder-form-container {
     padding-left: 20px;
     padding-right: 20px;
+  }
+  .expanded-portfolio-card .expanded-portfolio-navigation {
+    flex-direction: column;
+  }
+  .expanded-portfolio-card
+    .expanded-portfolio-navigation
+    .portfolio-card-text-container {
+    order: 1;
+    margin-left: 0;
+    max-width: 300px;
+    margin-top: 10px;
+  }
+  .expanded-portfolio-card .general-button {
+    order: 2;
+    margin-left: 0;
+    margin-top: 20px;
+  }
+  .expanded-portfolio-card .images-container img {
+    width: 300px;
   }
 }
 
@@ -439,6 +471,12 @@
   }
   .services .services-cotainer .services-cards-container .card {
     margin-bottom: 20px;
+  }
+  .form-submit-success {
+    position: static;
+  }
+  .form-submit-success span {
+    margin-bottom: 40px;
   }
 }
 
@@ -494,6 +532,9 @@
   .main {
     padding-top: 130px;
     padding-bottom: 140px;
+  }
+  #burger {
+    display: block;
   }
 }
 
@@ -556,7 +597,7 @@
     padding: 20px 20px 40px 20px;
   }
 }
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 374px) {
   .about-me
     .about-me-container
     .about-me-content-text
@@ -576,5 +617,14 @@
   }
   .portfolio .portfolio-container .portfolio-cards .portfolio-card img {
     width: 300px;
+  }
+  .portfolio .portfolio-container .portfolio-cards .portfolio-card img {
+    width: 265px;
+  }
+  .reviews .reviews-container .reviews-carousel .carousel-item img {
+    width: 110px;
+  }
+  .main .main-container .main-description .main-description-title {
+    font-size: 40px;
   }
 }
