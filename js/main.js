@@ -1,5 +1,5 @@
 $(document).ready(() => {
-  $(".header .header-container .menu-item").click((e) => {
+  $(".menu-item").click((e) => {
     let currentElement = $(e.target);
     $(".menu-item").removeClass("active-menu-item");
     currentElement.addClass("active-menu-item");
@@ -315,5 +315,9 @@ $(document).ready(() => {
   });
   $("#burger-popup .burger-menu .order-call-button").click(() => {
     $("#burger-popup").css("display", "none");
+  });
+  $("#burger-popup .burger-menu .menu-container .menu .menu-item").click(() => {
+    $("#burger-popup").css("display", "none");
+    $("body").removeClass("modal-open");
   });
 });
