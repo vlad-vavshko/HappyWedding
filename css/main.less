@@ -41,8 +41,8 @@ body {
 
 .paragraph-text {
   font-family: "Nunito Regular", sans-serif;
-  font-size: 16px;
-  line-height: 22px;
+  font-size: 14px;
+  line-height: 19px;
   color: @text-color;
 }
 
@@ -174,9 +174,11 @@ body {
   position: relative;
   padding-top: 219px;
   padding-bottom: 205px;
+  z-index: -2;
   .main-container {
     .container();
     display: flex;
+
     .main-description {
       padding: 86px 78px;
       background-color: rgba(248, 243, 240, 0.7);
@@ -185,7 +187,6 @@ body {
       top: 0;
       left: -78px;
       max-width: 596px;
-      z-index: 0;
       &::before {
         position: absolute;
         top: 20px;
@@ -294,12 +295,14 @@ body {
         display: flex;
         flex-direction: column;
         margin: 0 46px 14px 46px;
+        position: relative;
         img {
           width: 45px;
           height: 45px;
           margin-bottom: 20px;
           margin-left: 15px;
         }
+
         .feature-title {
           font-family: "Nunito Bold", sans-serif;
           font-size: 16px;
@@ -599,7 +602,7 @@ body {
       width: 361px;
       height: 99%;
       margin: 0 10px;
-      box-shadow: 0px 2px 15px rgba(55, 14, 29, 0.1);
+      box-shadow: 0px 2px 15px rgba(55, 14, 29, 0.05);
       border-radius: 5px;
       outline: none;
       transition: all 0.2s ease-out;
@@ -661,7 +664,7 @@ body {
 
 .reviews {
   padding-top: 85px;
-  padding-bottom: 55px;
+  padding-bottom: 85px;
   .reviews-container {
     .container();
     .section-title {
@@ -692,7 +695,7 @@ body {
         min-height: 100%;
         padding: 40px 50px;
         text-align: center;
-        box-shadow: 0px 2px 15px rgba(55, 14, 29, 0.1);
+        box-shadow: 0px 2px 15px rgba(55, 14, 29, 0.05);
         border-radius: 10px;
         outline: none;
         position: relative;
@@ -727,6 +730,7 @@ body {
           }
           img {
             margin: 0 auto;
+            width: 77px;
           }
         }
         .review-text {
@@ -938,10 +942,6 @@ form {
       background: #fdfcfc;
       border: 1px solid #efdfd8;
     }
-    &:hover {
-      background: #fdfcfc;
-      border: 1px solid #efdfd8;
-    }
   }
 }
 
@@ -1113,4 +1113,8 @@ body.modal-open {
       }
     }
   }
+}
+.slick-prev.slick-disabled:before,
+.slick-next.slick-disabled:before {
+  opacity: 0;
 }
