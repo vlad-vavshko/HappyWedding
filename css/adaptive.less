@@ -8,6 +8,13 @@
 }
 
 @media screen and (max-width: 1200px) {
+  .article {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .article .article-container .article-content {
+    margin-right: 30px;
+  }
   .about-me .about-me-container .about-me-content {
     margin-bottom: 290px;
   }
@@ -122,6 +129,9 @@
 }
 
 @media screen and (max-width: 1024px) {
+  .article-main .article-main-container .article-main-text .article-title {
+    width: 370px;
+  }
   #order-call > div > div > img,
   #order-popup .form-img > img {
     position: absolute;
@@ -290,6 +300,22 @@
   }
 }
 @media screen and (max-width: 920px) {
+  .article-main .article-main-container .article-main-text {
+    margin-right: 45px;
+  }
+
+  .article .article-container .article-sidebar-navigation {
+    display: none;
+  }
+  .article .article-container .article-content {
+    margin-right: 0;
+    padding-left: 0;
+    max-width: 100%;
+  }
+  .blog.article-carousel {
+    display: block;
+  }
+
   #order-popup .oder-form-container {
     padding-left: 100px;
     padding-right: 100px;
@@ -356,9 +382,30 @@
 }
 
 @media screen and (max-width: 767px) {
-  // .main .main-container .main-description::after {
-  //   content: url("../images/main-image-smaller.png");
-  // }
+  .article {
+    padding-top: 20px;
+  }
+  .article-main .article-main-container {
+    flex-direction: column;
+  }
+  .article-main .article-main-container .article-main-text .article-title {
+    width: 100%;
+  }
+  .article-main .article-main-container .article-main-text {
+    margin-right: 0;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .article-main .article-main-container .article-main-img::after {
+    left: 5px;
+    top: 5px;
+  }
+  .article-main .article-main-container .article-main-img {
+    max-width: 560px;
+    img {
+      width: 100%;
+    }
+  }
   .main-img,
   .main .main-container .main-img img {
     display: block;
@@ -565,6 +612,18 @@
 }
 
 @media screen and (max-width: 475px) {
+  .article-main .article-main-container .article-main-text .article-title {
+    font-size: 24px;
+    line-height: 33px;
+  }
+  .article-main-description {
+    font-size: 16px;
+    line-height: 22px;
+  }
+  .article-content .article-bold {
+    font-size: 16px;
+    line-height: 22px;
+  }
   .main-img,
   .main .main-container .main-img img {
     margin-left: auto;
