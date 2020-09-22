@@ -5,7 +5,7 @@ $(document).ready(() => {
     currentElement.addClass("active-menu-item");
   });
 
-  $(".menu").on("click", "a", function (event) {
+  $(".menu").on("click", ".menu-item.landing", function (event) {
     //отменяем стандартную обработку нажатия по ссылке
     event.preventDefault();
     //забираем идентификатор бока с атрибута hre
