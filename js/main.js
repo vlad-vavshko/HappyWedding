@@ -320,9 +320,4 @@ $(document).ready(() => {
     $("#burger-popup").css("display", "none");
     $("body").removeClass("modal-open");
   });
-
-  // Init  WOW
-  new WOW({
-    animateClass: "animate__animated",
-  }).init();
 });
