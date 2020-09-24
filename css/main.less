@@ -627,7 +627,7 @@ body {
       .item-content {
         padding: 20px 20px 25px 20px;
         .item-content-title {
-          font-family: "Nuniti Bold", sans-serif;
+          font-family: "Nunito Bold", sans-serif;
           font-weight: bold;
           font-size: 18px;
           line-height: 25px;
@@ -696,6 +696,7 @@ body {
         top: 48px;
         left: -16px;
         z-index: -1;
+        opacity: 0.4;
       }
       &::after {
         position: absolute;
@@ -1189,7 +1190,7 @@ body.modal-open {
         border: 1px solid rgba(193, 150, 143, 0.6);
         border-radius: 5px;
         position: absolute;
-        top: -5px;
+        top: -13px;
         left: 20px;
         z-index: -1;
       }
@@ -1270,11 +1271,13 @@ body.modal-open {
           flex-direction: column;
           padding: 15px 20px 25px 20px;
           background: white;
+          color: @text-color;
           .sidebar-title {
             font-family: "Nunito Bold", sans-serif;
             font-size: 18px;
             line-height: 25px;
             margin-bottom: 60px;
+            color: @text-color;
           }
         }
       }
@@ -1285,8 +1288,10 @@ body.modal-open {
   display: none;
 }
 
-// #test {
-//   display: block;
-//   height: 100%;
-//   background: transparent;
-// }
+.ui-accordion .ui-accordion-header {
+  align-items: center;
+}
+
+#ui-id-1 > br {
+  display: none;
+}

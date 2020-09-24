@@ -193,6 +193,8 @@
   }
   .main .main-container .main-description .main-description-title {
     margin-bottom: 30px;
+    line-height: 40px;
+    margin-bottom: 10px;
   }
   .main .main-container .main-description::after {
     left: 470px;
@@ -301,6 +303,13 @@
   }
 }
 @media screen and (max-width: 920px) {
+  #portfolio-cards > div:nth-child(4) {
+    order: 2;
+  }
+  #portfolio-cards > div:nth-child(3) {
+    order: 3;
+  }
+
   .article-main .article-main-container .article-main-text {
     margin-right: 45px;
   }
@@ -380,9 +389,25 @@
     flex-wrap: nowrap;
     overflow-x: scroll;
   }
+  .main .main-container .main-description .paragraph-text {
+    margin-bottom: 25px;
+  }
+  .main .main-container .main-description {
+    padding-bottom: 65px;
+  }
+  .ui-accordion .ui-accordion-content {
+    padding-right: 90px;
+  }
 }
 
 @media screen and (max-width: 767px) {
+  .reviews .reviews-container .reviews-carousel .carousel-item img {
+    width: 127px;
+  }
+
+  .portfolio .portfolio-container .section-title {
+    margin-bottom: 20px;
+  }
   .reviews {
     padding-top: 140px;
   }
@@ -575,7 +600,7 @@
     font-size: 32px;
   }
   .reviews .reviews-container .reviews-stock {
-    background: url("../images/reviews-stock-bg-smaller.png");
+    background: url("../images/reviews-stock-bg-smaller.jpg");
     background-repeat: no-repeat;
     background-position: right top;
   }
@@ -597,6 +622,17 @@
 }
 
 @media screen and (max-width: 500px) {
+  .reviews .reviews-container .reviews-stock {
+    padding: 225px 40px 20px 40px;
+  }
+
+  .reviews .reviews-container .reviews-carousel .carousel-item .review-text {
+    padding: 20px 20px 40px 20px;
+    background-color: white;
+  }
+  #ui-id-1 > br {
+    display: block;
+  }
   .footer .header-container .menu-container .menu {
     flex-direction: column;
     align-items: center;
@@ -623,6 +659,20 @@
 }
 
 @media screen and (max-width: 475px) {
+  .portfolio .portfolio-container .portfolio-cards {
+    max-width: 285px;
+  }
+  .portfolio .portfolio-container .portfolio-cards .portfolio-card img {
+    width: 280px;
+  }
+  .about-me-content-img::after {
+    top: -130px;
+    right: -13px;
+  }
+  .reviews .reviews-container .reviews-stock {
+    background-image: url("../images/review-stock-bg-mobile.jpg");
+  }
+
   .article-main .article-main-container .article-main-text .article-title {
     font-size: 24px;
     line-height: 33px;
@@ -663,11 +713,18 @@
   #portfolio > div > div.stock > div.stock-images > img:nth-child(1) {
     display: none;
   }
-  .reviews .reviews-container .reviews-carousel .carousel-item .review-text {
-    padding: 20px 20px 40px 20px;
-  }
 }
-@media screen and (max-width: 374px) {
+@media screen and (max-width: 375px) {
+  .about-me.tablet-scroll {
+    overflow: hidden;
+  }
+  .about-me .about-me-container .about-me-content #dancing-pair {
+    transform: rotateY(180deg);
+    opacity: 0.4;
+    width: 134px;
+    left: 188px;
+    top: 80px;
+  }
   .about-me
     .about-me-container
     .about-me-content-text
@@ -679,7 +736,7 @@
     width: 300px;
   }
   div.about-me-content > div.about-me-content-img > img:nth-child(1) {
-    width: 300px;
+    width: 275px;
   }
   .services .services-cotainer .quote {
     padding-left: 15px;
