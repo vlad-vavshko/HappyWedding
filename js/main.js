@@ -34,6 +34,7 @@ $(document).ready(() => {
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
+          arrows: false,
         },
       },
     ],
@@ -44,6 +45,14 @@ $(document).ready(() => {
     slidesToShow: 1,
     slidesToScroll: 1,
     dots: false,
+    responsive: [
+      {
+        breakpoint: 575,
+        settings: {
+          arrows: false,
+        },
+      },
+    ],
   });
 
   $("#accordion").accordion({
