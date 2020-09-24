@@ -320,4 +320,5 @@ $(document).ready(() => {
     $("#burger-popup").css("display", "none");
     $("body").removeClass("modal-open");
   });
+  $(".ui-accordion .ui-accordion-content").css("height", "auto");
 });
