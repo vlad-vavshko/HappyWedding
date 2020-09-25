@@ -11,7 +11,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $content = $name . ' оставил заявку на звонок. Его телефон: ' . $phone . '.';
 
     // Первый параметр - кому отправляем письмо, второй - тема письма, третий - содержание
-    $success = mail("test@mail.com", 'Запрос на Организацию свадьбы', $content);
+    $success = mail("Solodovnikova_ks@mail.ru", 'Запрос на Организацию свадьбы', $content);
 
     if ($success) {
         // Отдаем 200 код ответа на http запрос

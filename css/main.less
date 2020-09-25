@@ -178,9 +178,10 @@ body {
   background-size: cover;
   background-position: bottom center;
   position: relative;
-  padding-top: 219px;
+  padding-top: 205px;
   padding-bottom: 205px;
   z-index: 0;
+  overflow: hidden;
   .main-container {
     .container();
     display: flex;
@@ -208,8 +209,8 @@ body {
       }
       &::after {
         position: absolute;
-        top: -25px;
-        left: 560px;
+        top: -95px;
+        left: 514px;
         content: url("../images/main-image.png");
       }
       .main-description-title {
@@ -223,6 +224,7 @@ body {
         margin-bottom: 6px;
       }
       .paragraph-text {
+        max-width: 369px;
         margin-bottom: 30px;
       }
     }
@@ -626,6 +628,10 @@ body {
       }
       .item-content {
         padding: 20px 20px 25px 20px;
+        height: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
         .item-content-title {
           font-family: "Nunito Bold", sans-serif;
           font-weight: bold;
@@ -651,6 +657,7 @@ body {
   border-bottom: 1px solid #d2bebc;
   padding-bottom: 5px;
   outline: none;
+  width: max-content;
 }
 .slick-next:before {
   content: url("../images/arrow-right.png");
@@ -764,7 +771,7 @@ body {
       background-image: url("../images/reviews-stock-bg.jpg");
       background-size: cover;
       background-repeat: no-repeat;
-      padding: 112px 85px;
+      padding: 112px 85px 154px 85px;
       position: relative;
       box-shadow: 0px 2px 15px rgba(55, 14, 29, 0.05);
       border-radius: 5px;
@@ -792,6 +799,8 @@ body {
           margin-bottom: 20px;
         }
         .paragraph-text {
+          font-size: 18px;
+          line-height: 25px;
           span {
             font-family: "Nunito Bold", sans-serif;
           }
@@ -833,7 +842,7 @@ body {
 }
 
 .ui-accordion .ui-accordion-header {
-  font-family: "Nunito Bold", sans-serif;
+  font-family: "Nunito SemiBold", sans-serif;
   font-size: 20px;
   line-height: 27px;
   color: @text-color;
@@ -844,6 +853,10 @@ body {
 .ui-icon-triangle-1-e,
 .ui-state-active .ui-icon {
   margin-left: auto;
+}
+
+.ui-accordion .ui-accordion-content {
+  padding-right: 564px;
 }
 
 .ui-state-default,
@@ -1134,7 +1147,7 @@ body.modal-open {
 }
 .slick-prev.slick-disabled:before,
 .slick-next.slick-disabled:before {
-  opacity: 0;
+  opacity: 0.2;
 }
 
 //Article styles
@@ -1292,6 +1305,10 @@ body.modal-open {
   align-items: center;
 }
 
-#ui-id-1 > br {
+#ui-id-1 > br,
+#ui-id-3 > br {
+  display: none;
+}
+.blog.tablet-scroll.articles {
   display: none;
 }
