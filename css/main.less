@@ -34,8 +34,8 @@
   box-sizing: border-box;
 }
 a {
-  text-decoration: none;
-  outline: none;
+  text-decoration: none !important;
+  outline: none !important;
 }
 
 html,
@@ -100,6 +100,7 @@ body {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
+  justify-content: space-between;
   .container();
   padding: 17px 0;
   .logo {
@@ -128,7 +129,7 @@ body {
     }
   }
   .phone-number {
-    font-family: "Nunito Bold", sans-serif;
+    font-family: "Nunito SemiBold", sans-serif;
     font-size: 14px;
     line-height: 19px;
     color: @text-color;
@@ -149,6 +150,7 @@ body {
         line-height: 19px;
         color: @text-color;
         margin: 0 25px;
+        text-decoration: none;
         &:hover {
           color: #b78781;
         }
@@ -380,10 +382,12 @@ body {
 
         .card-content {
           padding-top: 50px;
+          padding-right: 5px;
+          padding-left: 5px;
           display: flex;
           flex-direction: column;
           align-items: center;
-          width: 295px;
+          max-width: 295px;
           margin: 0 auto;
           text-align: center;
           .card-title {
@@ -628,7 +632,7 @@ body {
       }
       .item-content {
         padding: 20px 20px 25px 20px;
-        height: 50%;
+
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -1001,6 +1005,24 @@ form {
   box-shadow: 0px 4px 15px rgba(55, 14, 29, 0.05);
 }
 
+.footer .menu .row .menu-item {
+  margin: 0;
+}
+
+.privacy-policy {
+  width: 350px;
+}
+.footer .header-container {
+  align-items: baseline;
+}
+.footer .menu .row:first-child {
+  margin-bottom: 20px;
+}
+
+.footer .header-container .phone-number {
+  margin-left: 165px;
+}
+
 #back-to-top-btn {
   display: none;
   align-items: center;
@@ -1106,7 +1128,7 @@ body.modal-open {
         flex-direction: column;
         align-items: center;
         .menu-item {
-          font-family: "Nunito Bold";
+          font-family: "Nunito SemiBold", sans-serif;
           font-size: 14px;
           line-height: 19px;
           color: @text-color;
@@ -1117,7 +1139,7 @@ body.modal-open {
         }
       }
       .phone-number {
-        font-family: "Nunito Bold", sans-serif;
+        font-family: "Nunito SemiBold", sans-serif;
         font-size: 14px;
         line-height: 19px;
         color: @text-color;
@@ -1297,6 +1319,25 @@ body.modal-open {
     }
   }
 }
+#footer-navigaton-sm-screen {
+  display: none;
+}
+#privacy-policy-sm-screen {
+  display: none;
+  font-family: "Nunito SemiBold", sans-serif;
+  font-size: 14px;
+  line-height: 19px;
+  color: @text-color;
+  margin-right: 50px;
+  &:hover {
+    color: #b78781;
+  }
+}
+#footer-action {
+  display: flex;
+  align-items: center;
+}
+
 .blog.article-carousel {
   display: none;
 }
