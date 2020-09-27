@@ -20,7 +20,7 @@
 }
 @font-face {
   font-family: "Nunito SemiBold";
-  src: url("../fonts/Nunito-SemiBold");
+  src: url("../fonts/Nunito-SemiBold.ttf");
 }
 
 @text-color: #370e1d;
@@ -68,6 +68,7 @@ body {
   border: none;
   z-index: 2;
   transition: all 0.2s ease-out;
+  outline: none !important;
   &:hover {
     cursor: pointer;
     background: linear-gradient(180deg, #b78781 0%, #8a5c56 100%), #c1968f;
@@ -941,9 +942,6 @@ html .ui-button.ui-state-disabled:active {
   .form {
     display: block;
     margin-right: auto;
-    .general-button {
-      margin-top: 6px;
-    }
   }
 }
 
@@ -1019,7 +1017,7 @@ form {
 }
 
 .footer .header-container .phone-number {
-  margin-left: 165px;
+  margin-left: 50px;
 }
 
 #back-to-top-btn {
@@ -1088,7 +1086,7 @@ body.modal-open {
           width: unset;
         }
         .general-button {
-          margin-top: 6px;
+          margin-top: 30px;
         }
       }
     }
@@ -1351,4 +1349,89 @@ body.modal-open {
 }
 .blog.tablet-scroll.articles {
   display: none;
+}
+
+.privacy-policy-label {
+  cursor: pointer;
+  font-size: 12px;
+  line-height: 16px;
+  font-family: "Nunito Regular", sans-serif;
+  color: @text-color;
+  margin: 0 0 0 20px;
+}
+.checkbox {
+}
+.form-action {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 6px;
+}
+.privacy-input-container {
+  display: flex;
+  align-items: center;
+  position: relative;
+  left: 5%;
+}
+.checkbox {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.checkbox-custom {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 14px;
+  width: 14px;
+  background-color: #fdfcfc;
+  border-radius: 5px;
+  border: 1px solid #c29892;
+}
+
+.checkbox-custom::after {
+  position: absolute;
+  content: "";
+  top: 7px;
+  left: 7px;
+  height: 0;
+  width: 0;
+  border-radius: 5px;
+  border: solid black;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(0deg) scale(0);
+  -ms-transform: rotate(0deg) scale(0);
+  transform: rotate(0deg) scale(0);
+  opacity: 1;
+}
+
+.checkbox:checked ~ .checkbox-custom {
+  background-color: #b78781;
+  border-radius: 5px;
+  -webkit-transform: rotate(0deg) scale(1);
+  -ms-transform: rotate(0deg) scale(1);
+  transform: rotate(0deg) scale(1);
+  opacity: 1;
+}
+
+.checkbox:checked ~ .checkbox-custom::after {
+  -webkit-transform: rotate(45deg) scale(1);
+  -ms-transform: rotate(45deg) scale(1);
+  transform: rotate(45deg) scale(1);
+  opacity: 1;
+  left: 5px;
+  top: -5px;
+  width: 7px;
+  height: 13px;
+  border: solid #370e1d;
+  border-width: 0 1px 1px 0;
+  background-color: transparent;
+  border-radius: 0;
+}
+
+#order-call .privacy-input-container {
+  left: 0;
+  margin-top: 6px;
+  margin-bottom: 10px;
 }

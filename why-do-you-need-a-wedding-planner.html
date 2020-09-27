@@ -283,7 +283,17 @@
                                 placeholder="Дата свадьбы" name="date">
                         </form>
                         <div class="error-message">*Поля обязательно заполнить для отправки заявки</div>
-                        <button class="general-button page-form-submit">Организовать свадьбу</button>
+                        <div class="form-action">
+                            <button class="general-button page-form-submit">Организовать свадьбу</button>
+                            <div class="privacy-input-container">
+
+                                <label for="privacy-policy-checkbox-form" class="privacy-policy-label">
+                                    <input type="checkbox" id="privacy-policy-checkbox-form" class="checkbox">
+                                    <span class="checkbox-custom"></span>*Я согласен на
+                                    обработку
+                                    персональных данных</label>
+                            </div>
+                        </div>
                     </div>
                     <div class="form-img">
                         <img src="./images/form-img.png" alt="form-img">
@@ -371,7 +381,16 @@
                             name="date">
                     </form>
                     <div class="error-message">*Поля обязательно заполнить для отправки заявки</div>
-                    <button class="general-button page-form-submit">Организовать свадьбу</button>
+                    <div class="form-action">
+                        <button class="general-button page-form-submit">Организовать свадьбу</button>
+                        <div class="privacy-input-container">
+                            <label for="privacy-policy-checkbox-popup" class="privacy-policy-label">
+                                <input type="checkbox" id="privacy-policy-checkbox-popup" class="checkbox">
+                                <span class="checkbox-custom"></span>*Я согласен на
+                                обработку
+                                персональных данных</label>
+                        </div>
+                    </div>
                 </div>
                 <div class="form-img">
                     <img src="./images/form-img.png" alt="form-img">
@@ -393,6 +412,11 @@
                         <input type="text" class="form-input" placeholder="Имя*" name="first-name">
                         <input type="tel" class="form-input" placeholder="+7 (   ) ___-__-__*" name="telephone">
                     </form>
+                    <div class="privacy-input-container">
+                        <label for="privacy-policy-checkbox-popup-order-call" class="privacy-policy-label">
+                            <input type="checkbox" id="privacy-policy-checkbox-popup-order-call" class="checkbox">
+                            <span class="checkbox-custom"></span>*Я согласен наобработку персональных данных</label>
+                    </div>
                     <div class="error-message">*Поля обязательно заполнить для отправки заявки</div>
                     <button class="general-button" id="order-call-btn">Отправить заявку</button>
                 </div>
@@ -400,7 +424,6 @@
                 <div class="form-submit-success">
                     <span>С вами свяжутся в ближайшее время.</span>
                 </div>
-
             </div>
         </div>
     </div>

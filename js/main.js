@@ -83,7 +83,15 @@ $(document).ready(() => {
     let email = $(".oder-form-container .form form input:nth-child(4)");
     let middle_name = $(".form form input:nth-child(5)");
     let date = $(".form form input:nth-child(6)");
-    if (name.val() && phone.val() && last_name.val() && email.val()) {
+    let checkbox = $(".form-action .checkbox");
+    if (
+      name.val() &&
+      phone.val() &&
+      last_name.val() &&
+      email.val() &&
+      checkbox.prop("checked")
+    ) {
+      $(".form-content .form .error-message").hide();
       alert("Отправка письма");
       $.ajax({
         type: "post",
@@ -119,33 +127,35 @@ $(document).ready(() => {
         },
       });
     } else {
+      $(".form-content .form .error-message").show();
       if (!name.val()) {
         name.addClass("required");
-        $(".form-content .form .error-message").show();
       } else {
         name.removeClass("required");
-        $(".form-content .form .error-message").hide();
       }
       if (!phone.val()) {
         phone.addClass("required");
-        $(".form-content .form .error-message").show();
       } else {
         phone.removeClass("required");
-        $(".form-content .form .error-message").hide();
       }
       if (!last_name.val()) {
         last_name.addClass("required");
-        $(".form-content .form .error-message").show();
       } else {
         last_name.removeClass("required");
-        $(".form-content .form .error-message").hide();
       }
       if (!email.val()) {
         email.addClass("required");
-        $(".form-content .form .error-message").show();
       } else {
         email.removeClass("required");
-        $(".form-content .form .error-message").hide();
+      }
+      if (!checkbox.prop("checked")) {
+        $(".form-action .privacy-input-container .checkbox-custom").addClass(
+          "required"
+        );
+      } else {
+        $(".form-action .privacy-input-container .checkbox-custom").removeClass(
+          "required"
+        );
       }
     }
   });
@@ -157,7 +167,15 @@ $(document).ready(() => {
     let email = $(".form.popup form input:nth-child(4)");
     let middle_name = $(".form.popup form input:nth-child(5)");
     let date = $(".form.popup form input:nth-child(6)");
-    if (name.val() && phone.val() && last_name.val() && email.val()) {
+    let checkbox_popup = $(".form.popup .form-action .checkbox");
+    if (
+      name.val() &&
+      phone.val() &&
+      last_name.val() &&
+      email.val() &&
+      checkbox_popup.prop("checked")
+    ) {
+      $(".form-content .form.popup .error-message").hide();
       alert("Отправка письма");
       $.ajax({
         type: "post",
@@ -194,33 +212,35 @@ $(document).ready(() => {
         },
       });
     } else {
+      $(".form-content .form.popup .error-message").show();
       if (!name.val()) {
         name.addClass("required");
-        $(".form-content .form.popup .error-message").show();
       } else {
         name.removeClass("required");
-        $(".form-content .form.popup .error-message").hide();
       }
       if (!phone.val()) {
         phone.addClass("required");
-        $(".form-content .form.popup .error-message").show();
       } else {
         phone.removeClass("required");
-        $(".form-content .form.popup .error-message").hide();
       }
       if (!last_name.val()) {
         last_name.addClass("required");
-        $(".form-content .form.popup .error-message").show();
       } else {
         last_name.removeClass("required");
-        $(".form-content .form.popup .error-message").hide();
       }
       if (!email.val()) {
         email.addClass("required");
-        $(".form-content .form.popup .error-message").show();
       } else {
         email.removeClass("required");
-        $(".form-content .form.popup .error-message").hide();
+      }
+      if (!checkbox_popup.prop("checked")) {
+        $(".form-action .privacy-input-container .checkbox-custom").addClass(
+          "required"
+        );
+      } else {
+        $(
+          ".form.popup .form-action .privacy-input-container .checkbox-custom"
+        ).removeClass("required");
       }
     }
   });
@@ -229,7 +249,11 @@ $(document).ready(() => {
   $("#order-call-btn").click(() => {
     let name = $("#order-call div.form > form > input:nth-child(1)");
     let phone = $("#order-call div.form > form > input:nth-child(2)");
-    if (name.val() && phone.val()) {
+    let checkbox_call_popup = $(
+      "#order-call .privacy-input-container .checkbox"
+    );
+    if (name.val() && phone.val() && checkbox_call_popup.prop("checked")) {
+      $("#order-call > div > div > div.form > div.error-message").hide();
       alert("Отправка письма");
       $.ajax({
         type: "post",
@@ -256,19 +280,25 @@ $(document).ready(() => {
         },
       });
     } else {
+      $("#order-call > div > div > div.form > div.error-message").show();
+      if (!checkbox_call_popup.prop("checked")) {
+        $("#order-call .privacy-input-container .checkbox-custom").addClass(
+          "required"
+        );
+      } else {
+        $("#order-call .privacy-input-container .checkbox-custom").removeClass(
+          "required"
+        );
+      }
       if (!name.val()) {
         name.addClass("required");
-        $("#order-call > div > div > div.form > div.error-message").show();
       } else {
         name.removeClass("required");
-        $("#order-call > div > div > div.form > div.error-message").hide();
       }
       if (!phone.val()) {
         phone.addClass("required");
-        $("#order-call > div > div > div.form > div.error-message").show();
       } else {
         phone.removeClass("required");
-        $("#order-call > div > div > div.form > div.error-message").hide();
       }
     }
   });
