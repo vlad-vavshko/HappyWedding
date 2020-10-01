@@ -62,7 +62,6 @@ $(document).ready(() => {
 
   $(".portfolio-card").on("click", function () {
     var dataId = $(this).attr("data-id");
-    console.log(dataId);
     $(dataId).fadeIn();
     $(dataId).show();
     $("#portfolio-cards").fadeOut();
