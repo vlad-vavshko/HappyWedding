@@ -91,7 +91,6 @@ $(document).ready(() => {
       checkbox.prop("checked")
     ) {
       $(".form-content .form .error-message").hide();
-      alert("Отправка письма");
       $.ajax({
         type: "post",
         url: "order-wedding.php",
@@ -175,7 +174,6 @@ $(document).ready(() => {
       checkbox_popup.prop("checked")
     ) {
       $(".form-content .form.popup .error-message").hide();
-      alert("Отправка письма");
       $.ajax({
         type: "post",
         url: "order-wedding.php",
@@ -253,7 +251,6 @@ $(document).ready(() => {
     );
     if (name.val() && phone.val() && checkbox_call_popup.prop("checked")) {
       $("#order-call > div > div > div.form > div.error-message").hide();
-      alert("Отправка письма");
       $.ajax({
         type: "post",
         url: "order-call.php",
