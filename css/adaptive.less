@@ -452,6 +452,15 @@
 }
 
 @media screen and (max-width: 767px) {
+  .about-me .about-me-container .section-title,
+  .services .services-cotainer .section-title,
+  .portfolio .portfolio-container .section-title,
+  .blog .section-title,
+  .reviews .reviews-container .section-title,
+  .question-answers .question-answers-container .section-title {
+    margin-bottom: 20px;
+  }
+
   .reviews .reviews-container .reviews-carousel .carousel-item img {
     width: 127px;
   }
@@ -464,6 +473,7 @@
   }
   .about-me .about-me-container .features-container {
     padding-bottom: 0;
+    padding-top: 20px;
   }
   .about-me.tablet-scroll {
     padding-top: 100px !important;
@@ -786,6 +796,9 @@
 }
 
 @media screen and (max-width: 475px) {
+  div.stock > div.stock-images img {
+    width: unset;
+  }
   .services .services-cotainer .services-cards-container {
     margin-left: 0;
     margin-right: 0;
